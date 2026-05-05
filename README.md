@@ -83,5 +83,14 @@ Contributions are welcome! Please follow these steps:
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+## 👥 Team Members
+
+| Name | Student ID |
+| :--- | :--- |
+| **Akhilesh Kumar** | 2201330100028 |
+| **Prince Singh** | 2201330100185 |
+| **Akhilesh Kumar** | 2201330100027 |
+| **Abhishek Kumar Shrivastav** | 2201330100011 |
+
 ---
-Built with ❤️ by the Trading Platform Team.
+Built with ❤️ for the College Project.
