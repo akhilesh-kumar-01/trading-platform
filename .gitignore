@@ -1,0 +1,59 @@
+# Dependency directories
+node_modules/
+target/
+jspm_packages/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+*.class
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Documentation and Diagrams (per user request to ignore extra files)
+docs/
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Junk and temporary files
+maven/
+*.zip
+*.tar.gz
+*.rar
+tmp/
+temp/
+
+# Log files
+backend_log.txt
+frontend_log.txt
+test_results.txt
+test_results_detailed.txt
+test_results_full.txt

@@ -1,175 +1,87 @@
-# 🚀 Trading Platform
+# Trading Platform 🚀
 
-A full-stack **Trading Platform** built using **Spring Boot (Backend)** and **React (Frontend)**.
-This application allows users to manage trading operations, withdrawals, and transactions with a clean UI and scalable backend architecture.
+A professional, full-stack trading application built with **React** and **Spring Boot**. This platform provides real-time market data, portfolio management, secure withdrawals, and AI-driven insights.
 
----
+## ✨ Features
 
-## 📌 Tech Stack
+- **Real-time Market Data**: Integrated with CoinGecko for live cryptocurrency prices and trends.
+- **Portfolio Tracking**: Manage your assets, view profit/loss metrics, and track trading history.
+- **Secure Transactions**: Robust wallet system with support for deposits and withdrawals.
+- **Payment Integration**: Seamless payments via Stripe and Razorpay.
+- **AI-Driven Insights**: Leverages Google Gemini for market analysis and predictions.
+- **Secure Authentication**: Traditional login/signup and Google OAuth2 integration.
+- **User Verification**: Two-factor authentication (2FA) and account verification flows.
 
-### 🖥️ Frontend
+## 🛠 Tech Stack
 
-* React (Vite)
-* Tailwind CSS
-* Redux (State Management)
+### Frontend
+- **Framework**: React.js
+- **Styling**: Tailwind CSS
+- **State Management**: Redux
+- **Build Tool**: Vite
 
-### ⚙️ Backend
-
-* Spring Boot
-* Maven
-* REST APIs
-* Layered Architecture (Controller, Service, Repository)
-
-### 🗄️ Database
-
-* MySQL (or configurable via `application.properties`)
-
----
-
-## 📁 Project Structure
-
-```
-Trading-Platform
-│
-├── Backend-Spring boot
-│   ├── src/main/java/com/zosh
-│   │   ├── config
-│   │   ├── controller
-│   │   ├── domain
-│   │   ├── exception
-│   │   ├── model
-│   │   ├── repository
-│   │   ├── request
-│   │   ├── response
-│   │   ├── service
-│   │   └── utils
-│   │
-│   ├── src/main/resources
-│   │   └── application.properties
-│   │
-│   └── pom.xml
-│
-├── Frontend-React
-│   ├── src
-│   │   ├── Admin/Withdrawal
-│   │   ├── Api
-│   │   ├── Redux
-│   │   ├── components
-│   │   ├── pages
-│   │   └── utils
-│   │
-│   ├── public
-│   ├── index.html
-│   └── package.json
-```
-
----
-
-## ⚙️ Features
-
-* 👤 User Management
-* 💰 Trading & Transactions
-* 🏦 Withdrawal System (Admin controlled)
-* 🔐 Exception Handling & Validation
-* 📡 RESTful API Integration
-* ⚡ Fast UI with Vite + Tailwind
-
----
+### Backend
+- **Framework**: Spring Boot
+- **Database**: H2 (In-memory) / MySQL (Optional)
+- **Security**: Spring Security & OAuth2
+- **Mail**: Spring Boot Starter Mail
 
 ## 🚀 Getting Started
 
-### 🔹 Clone the repository
+### Prerequisites
+- Node.js (v18+)
+- Java (v17+)
+- Maven
 
-```bash
-git clone https://github.com/your-username/Trading-Platform.git
-cd Trading-Platform
-```
+### Installation
 
----
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/trading-platform.git
+   cd trading-platform
+   ```
 
-### 🔹 Backend Setup (Spring Boot)
+2. **Backend Setup**:
+   ```bash
+   cd backend
+   # Copy .env.example to .env and configure your keys
+   mvn spring-boot:run
+   ```
 
-```bash
-cd Backend-Spring\ boot
-mvn clean install
-mvn spring-boot:run
-```
+3. **Frontend Setup**:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
 
-👉 Runs on: `http://localhost:8080`
+## 🔐 Environment Variables
 
----
+Refer to [.env.example](.env.example) for a list of required environment variables. Key categories include:
+- Database credentials
+- SMTP settings for emails
+- Stripe and Razorpay API keys
+- CoinGecko and Gemini API keys
 
-### 🔹 Frontend Setup (React)
+## 🛣 Roadmap
 
-```bash
-cd Frontend-React
-npm install
-npm run dev
-```
-
-👉 Runs on: `http://localhost:5173`
-
----
-
-## 🔗 API Integration
-
-Frontend communicates with backend using REST APIs.
-
-Example:
-
-```
-GET /api/users
-POST /api/trade
-```
-
----
-
-## 🛡️ Best Practices Used
-
-* Clean architecture (Layered pattern)
-* Separation of concerns
-* Reusable components (React)
-* Centralized API handling
-* Exception handling in backend
-
----
-
-## 📸 Screenshots
-
-Login Page
-
-<img width="1920" height="873" alt="Login Page" src="https://github.com/user-attachments/assets/a60d24a5-594d-4082-ab8a-41dc0cefee51" />
-
-Home Page
-
-<img width="1920" height="918" alt="Home Page" src="https://github.com/user-attachments/assets/63b8f6dc-4e78-4916-a1fe-aea4307f3cc7" />
-
-
----
-
-## 📌 Future Improvements
-
-* 🔐 JWT Authentication
-* 📊 Dashboard analytics
-* 📈 Live trading data integration
-* ☁️ Deployment (AWS / Docker)
-
----
+- [ ] Support for multiple fiat currencies.
+- [ ] Advanced charting with TradingView integration.
+- [ ] Mobile application (React Native).
+- [ ] Push notifications for price alerts.
 
 ## 🤝 Contributing
 
-Feel free to fork this repository and contribute.
+Contributions are welcome! Please follow these steps:
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'feat: add some amazing feature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-
-## 👨‍💻 Author
-
-**Akhilesh Kumar**
-
-* GitHub: https://github.com/akhileshkumar4
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
+Built with ❤️ by the Trading Platform Team.

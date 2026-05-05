@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+ 
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+ 
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+ 
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+ 
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+ 
+    --radius: 0.5rem;
+
+    /* Custom Tokens - Light Mode */
+    --bg-base: #FFFFFF;
+    --bg-surface: #F8F9FA;
+    --bg-elevated: #E9ECEF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4B5563;
+    --text-muted: #9CA3AF;
+    --border-dim: #E5E7EB;
+    --accent: #2563EB;
+    --buy: #00C076;
+    --sell: #FF3B5C;
+  }
+ 
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+ 
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+ 
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+ 
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+ 
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+ 
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+ 
+    --accent: 217.2 91.2% 59.8%;
+    --accent-foreground: 210 20% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+ 
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+ 
+    /* Custom Tokens - Dark Mode */
+    --bg-base: #0A0B0D;
+    --bg-surface: #111318;
+    --bg-elevated: #181A21;
+    --text-primary: #E8E9EE;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --border-dim: #1E2028;
+    --accent: #3B82F6;
+    --buy: #00D186;
+    --sell: #FF4D6D;
+  }
+}
+
+.demo-mode-border {
+  position: relative;
+}
+
+.demo-mode-border::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border: 2px solid #3B82F6;
+  z-index: 9999;
+  opacity: 0.3;
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-bg-base text-text-primary font-inter overflow-x-hidden;
+    min-height: 100vh;
+  }
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* All prices, numbers, amounts should use mono */
+.price, .number, .amount {
+  @apply font-mono;
+}
+
+@keyframes flashGreen {
+  0% { background: rgba(0, 192, 118, 0.20); }
+  100% { background: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background: rgba(255, 59, 92, 0.20); }
+  100% { background: transparent; }
+}
+
+.flash-green {
+  animation: flashGreen 400ms ease-out;
+}
+
+.flash-red {
+  animation: flashRed 400ms ease-out;
+}
+
+/* Styles for the scrollable container */
+.scroll-container {
+  overflow-y: auto;
+}
+
+/* Custom scrollbar styles for Webkit browsers (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background:#1e293b; /* Color of the scrollbar thumb */
+  border-radius: 5rem;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+
+
+/* Optional: Ensure custom scrollbars work in Internet Explorer and Edge */
+.scroll-container {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: tickerScroll 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker-mask {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(0, 192, 118, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(0, 192, 118, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 192, 118, 0); }
+}
+
+@keyframes pulse-yellow {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.pulse-yellow {
+  animation: pulse-yellow 2s infinite;
+}
