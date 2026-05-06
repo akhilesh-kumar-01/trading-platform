@@ -93,4 +93,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 | **Abhishek Kumar Shrivastav** | 2201330100011 |
 
 ---
-Built with ❤️ for the College Project.
+Built with ❤️ for the College Major Project in 8th Sem.
